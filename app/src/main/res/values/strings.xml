@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Мониторинг здоровья</string>
+    <string name="nameSystem">Комплексная система мониторинга здоровья</string>
+    <string name="copyright">©Владимир Артюшин</string>
+    <string name="fullName">ФИО</string>
+    <string name="age">Возраст</string>
+    <string name="saveData">Сохранить данные</string>
+    <string name="goToRecordPressure">Перейти к записи давления</string>
+    <string name="goToRecordVitalSigns">Перейти к записи жизненых показателей</string>
+    <string name="pressure">Индивидуальные показатели</string>
+    <string name="vitalSigns">Жизненные показатели</string>
+    <string name="hiPressure">Верхнее давление</string>
+    <string name="lowPressure">Нижнее давление</string>
+    <string name="pulse">Пульс</string>
+    <string name="tachycardia">Тахикардия</string>
+    <string name="date">Дата замера</string>
+    <string name="weight">Вес</string>
+    <string name="numberSteps">Количество шагов</string>
+</resources>
