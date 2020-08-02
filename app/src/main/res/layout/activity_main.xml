@@ -12,8 +12,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="208dp"
-        android:layout_height="208dp"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
         android:layout_marginTop="4dp"
         android:background="@android:color/holo_blue_light"
         android:contentDescription="@string/copyright"
@@ -25,13 +25,13 @@
 
     <TextView
         android:id="@+id/tvNameSystem"
-        android:layout_width="340dp"
-        android:layout_height="82dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:text="@string/nameSystem"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,13 +57,14 @@
         android:layout_marginTop="20dp"
         android:background="@android:color/background_light"
         android:ems="10"
+        android:hint="@string/fullName"
+        android:importantForAutofill="no"
         android:inputType="text"
-        android:text="@string/fullName"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvCopyright"
-        android:importantForAutofill="no"
         tools:ignore="LabelFor" />
 
     <EditText
@@ -73,8 +74,9 @@
         android:layout_marginTop="10dp"
         android:background="@android:color/background_light"
         android:ems="10"
-        android:inputType="text"
-        android:text="@string/age"
+        android:hint="@string/age"
+        android:inputType="number"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,6 +121,19 @@
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bGoToRecordPressure" />
+
+    <Button
+        android:id="@+id/bResult"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#3F51B5"
+        android:text="@string/resume"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.669"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,8 +13,13 @@
     <string name="lowPressure">Нижнее давление</string>
     <string name="pulse">Пульс</string>
     <string name="tachycardia">Тахикардия</string>
-    <string name="date">Дата замера</string>
+    <string name="tachycardiaYes">Имеется</string>
+    <string name="tachycardiaNo">Отсутствует</string>
+    <string name="date">Дата замера (в формате ДД.ММ.ГГГГ)</string>
     <string name="weight">Вес</string>
     <string name="numberSteps">Количество шагов</string>
+    <string name="number_format_massage">Ошибка формата данных</string>
+    <string name="resume">Результат</string>
     <string name="exit">Закрыть</string>
+
 </resources>

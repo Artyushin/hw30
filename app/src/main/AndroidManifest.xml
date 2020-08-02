@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".xResume" />
+        <activity android:name=".XResume" />
         <activity android:name=".VitalSigns" />
         <activity android:name=".Pressure" />
         <activity android:name=".MainActivity">

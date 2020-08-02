@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/imageViewP"
-        android:layout_width="208dp"
-        android:layout_height="208dp"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
         android:layout_marginTop="4dp"
         android:background="@android:color/holo_blue_light"
         android:contentDescription="@string/copyright"
@@ -24,27 +24,28 @@
 
     <TextView
         android:id="@+id/tvNameSystemP"
-        android:layout_width="340dp"
-        android:layout_height="82dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:text="@string/nameSystem"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewP" />
 
     <EditText
-        android:id="@+id/hiPressure"
+        android:id="@+id/etHiPressure"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:background="@android:color/background_light"
         android:ems="10"
-        android:inputType="text"
-        android:text="@string/hiPressure"
+        android:hint="@string/hiPressure"
+        android:inputType="number"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,66 +54,68 @@
         tools:ignore="LabelFor" />
 
     <EditText
-        android:id="@+id/lowPressure"
+        android:id="@+id/etLowPressure"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:background="@android:color/background_light"
         android:ems="10"
-        android:inputType="text"
-        android:text="@string/lowPressure"
+        android:hint="@string/lowPressure"
+        android:inputType="number"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hiPressure"
+        app:layout_constraintTop_toBottomOf="@+id/etHiPressure"
         android:importantForAutofill="no"
         tools:ignore="LabelFor" />
 
     <EditText
-        android:id="@+id/pulse"
+        android:id="@+id/etPulse"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:background="@android:color/background_light"
         android:ems="10"
-        android:inputType="text"
-        android:text="@string/pulse"
+        android:hint="@string/pulse"
+        android:inputType="number"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lowPressure"
+        app:layout_constraintTop_toBottomOf="@+id/etLowPressure"
         android:importantForAutofill="no"
         tools:ignore="LabelFor" />
 
-    <EditText
-        android:id="@+id/tachycardia"
+    <CheckBox
+        android:id="@+id/cbTachycardia"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:background="@android:color/background_light"
         android:ems="10"
-        android:inputType="text"
         android:text="@string/tachycardia"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pulse"
+        app:layout_constraintTop_toBottomOf="@+id/etPulse"
         android:importantForAutofill="no"
         tools:ignore="LabelFor" />
 
     <EditText
-        android:id="@+id/date"
+        android:id="@+id/etDate"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:background="@android:color/background_light"
         android:ems="10"
+        android:hint="@string/date"
         android:inputType="date"
-        android:text="@string/date"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tachycardia"
+        app:layout_constraintTop_toBottomOf="@+id/cbTachycardia"
         android:importantForAutofill="no"
         tools:ignore="LabelFor" />
 
@@ -127,6 +130,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.891"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date" />
+        app:layout_constraintTop_toBottomOf="@+id/etDate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

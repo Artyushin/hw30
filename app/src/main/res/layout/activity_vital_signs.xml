@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/imageViewVS"
-        android:layout_width="208dp"
-        android:layout_height="208dp"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
         android:layout_marginTop="4dp"
         android:background="@android:color/holo_blue_light"
         android:contentDescription="@string/copyright"
@@ -24,27 +24,28 @@
 
     <TextView
         android:id="@+id/tvNameSystemVS"
-        android:layout_width="340dp"
-        android:layout_height="82dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:text="@string/nameSystem"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewVS" />
 
     <EditText
-        android:id="@+id/weight"
+        android:id="@+id/etWeight"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:background="@android:color/background_light"
         android:ems="10"
-        android:inputType="text"
-        android:text="@string/weight"
+        android:hint="@string/weight"
+        android:inputType="numberDecimal"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,32 +54,33 @@
         tools:ignore="LabelFor,TextFields" />
 
     <EditText
-        android:id="@+id/numberSteps"
+        android:id="@+id/etNumberSteps"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:background="@android:color/background_light"
         android:ems="10"
-        android:inputType="text"
-        android:text="@string/numberSteps"
+        android:hint="@string/numberSteps"
+        android:inputType="number"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weight"
+        app:layout_constraintTop_toBottomOf="@+id/etWeight"
         tools:ignore="LabelFor,TextFields"
         android:importantForAutofill="no" />
 
     <Button
-        android:id="@+id/bSaveDataP"
+        android:id="@+id/bSaveDataVS"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="60dp"
         android:text="@string/saveData"
         android:background="#3F51B5"
         android:textColor="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.891"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberSteps" />
+        app:layout_constraintTop_toBottomOf="@+id/etNumberSteps" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

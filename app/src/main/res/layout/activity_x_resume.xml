@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_light"
     android:foreground="@android:color/transparent"
-    tools:context=".xResume"
+    tools:context=".XResume"
     tools:ignore="UnusedAttribute">
 
     <ImageView
         android:id="@+id/imageViewX"
-        android:layout_width="208dp"
-        android:layout_height="208dp"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
         android:layout_marginTop="4dp"
         android:background="@android:color/holo_blue_light"
         android:contentDescription="@string/copyright"
@@ -24,13 +24,13 @@
 
     <TextView
         android:id="@+id/tvNameSystemX"
-        android:layout_width="340dp"
-        android:layout_height="82dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:text="@string/nameSystem"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,22 +39,22 @@
     <TextView
         android:id="@+id/tvResume"
         android:layout_width="340dp"
-        android:layout_height="300dp"
+        android:layout_height="200dp"
         android:layout_marginTop="5dp"
         android:text=""
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="12sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNameSystemX" />
 
     <Button
-        android:id="@+id/bSaveDataX"
+        android:id="@+id/bExit"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/saveData"
+        android:text="@string/exit"
         android:background="#3F51B5"
         android:textColor="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
