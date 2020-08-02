@@ -16,4 +16,5 @@
     <string name="date">Дата замера</string>
     <string name="weight">Вес</string>
     <string name="numberSteps">Количество шагов</string>
+    <string name="exit">Закрыть</string>
 </resources>

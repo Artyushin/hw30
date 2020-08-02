@@ -6,12 +6,11 @@
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_light"
     android:foreground="@android:color/transparent"
-    tools:context=".MainActivity"
+    tools:context=".VitalSigns"
     tools:ignore="UnusedAttribute">
 
-
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewVS"
         android:layout_width="208dp"
         android:layout_height="208dp"
         android:layout_marginTop="4dp"
@@ -24,7 +23,7 @@
         app:srcCompat="@mipmap/ic_launcher_heart" />
 
     <TextView
-        android:id="@+id/tvNameSystem"
+        android:id="@+id/tvNameSystemVS"
         android:layout_width="340dp"
         android:layout_height="82dp"
         android:layout_marginTop="5dp"
@@ -35,90 +34,51 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/tvCopyright"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/copyright"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNameSystem" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewVS" />
 
     <EditText
-        android:id="@+id/etFullName"
+        android:id="@+id/weight"
         android:layout_width="360dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:background="@android:color/background_light"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/fullName"
+        android:text="@string/weight"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCopyright"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameSystemVS"
         android:importantForAutofill="no"
-        tools:ignore="LabelFor" />
+        tools:ignore="LabelFor,TextFields" />
 
     <EditText
-        android:id="@+id/etAge"
+        android:id="@+id/numberSteps"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:background="@android:color/background_light"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/age"
+        android:text="@string/numberSteps"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etFullName"
-        android:importantForAutofill="no"
-        tools:ignore="LabelFor" />
+        app:layout_constraintTop_toBottomOf="@+id/weight"
+        tools:ignore="LabelFor,TextFields"
+        android:importantForAutofill="no" />
 
     <Button
-        android:id="@+id/bSaveData"
+        android:id="@+id/bSaveDataP"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="180dp"
         android:text="@string/saveData"
         android:background="#3F51B5"
         android:textColor="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.891"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etAge" />
-
-    <Button
-        android:id="@+id/bGoToRecordPressure"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="@string/goToRecordPressure"
-        android:background="#3F51B5"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bSaveData" />
-
-    <Button
-        android:id="@+id/bGoToRecordVitalSigns"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="#3F51B5"
-        android:text="@string/goToRecordVitalSigns"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bGoToRecordPressure" />
-
+        app:layout_constraintTop_toBottomOf="@+id/numberSteps" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
