@@ -9,26 +9,27 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import java.util.ArrayList;
 
 public class Pressure extends AppCompatActivity {
 
     private final static String TAG = "PressureActivity";
-    private ArrayList<APerson> listP = new ArrayList<>();
+    private ArrayList<PersonPressure> listP = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pressure);
 
-        final EditText etHiPressure = (EditText)  findViewById(R.id.etHiPressure);
-        final EditText etLowPressure = (EditText)  findViewById(R.id.etLowPressure);
-        final EditText etPulse = (EditText)  findViewById(R.id.etPulse);
-        final EditText etDate = (EditText)  findViewById(R.id.etDate);
+        final EditText etHiPressure = findViewById(R.id.etHiPressure);
+        final EditText etLowPressure = findViewById(R.id.etLowPressure);
+        final EditText etPulse = findViewById(R.id.etPulse);
+        final EditText etDate = findViewById(R.id.etDate);
 
-        final CheckBox checkBox = (CheckBox) findViewById(R.id.cbTachycardia);
+        final CheckBox checkBox = findViewById(R.id.cbTachycardia);
 
-        Button buttonSave = (Button) findViewById(R.id.bSaveDataP);
+        Button buttonSave = findViewById(R.id.bSaveDataP);
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,13 +38,11 @@ public class Pressure extends AppCompatActivity {
                 String lowPressureStr = etLowPressure.getText().toString();
                 String pulseStr = etPulse.getText().toString();
                 String date = etDate.getText().toString();
-                String tachycardia = " ";
+                String tachycardia;
 
                 if (checkBox.isChecked()) {
                     tachycardia = (String) getText(R.string.tachycardiaYes);
-                } else {
-                    tachycardia = (String) getText(R.string.tachycardiaNo);
-                };
+                } else tachycardia = (String) getText(R.string.tachycardiaNo);
 
                 int hiPressure = 0;
                 int lowPressure = 0;
@@ -78,12 +77,12 @@ public class Pressure extends AppCompatActivity {
                 APerson.pulse = pulse;
                 APerson.tachycardia = tachycardia;
                 APerson.date = date;
-                APerson person = new APerson();
+
+                PersonPressure person = new PersonPressure(hiPressure, lowPressure, pulse, tachycardia, date);
                 listP.add(person);
+
                 finish();
-            };
+            }
         });
-
-
     }
 }

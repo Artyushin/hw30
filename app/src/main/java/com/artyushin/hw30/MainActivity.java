@@ -15,17 +15,17 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private final static String TAG = "MainActivity";
-    private ArrayList list = new ArrayList();
+    private ArrayList<Person> list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final EditText etFullName = (EditText)  findViewById(R.id.etFullName);
-        final EditText etAge = (EditText)  findViewById(R.id.etAge);
+        final EditText etFullName = findViewById(R.id.etFullName);
+        final EditText etAge = findViewById(R.id.etAge);
 
-        Button buttonSave = (Button) findViewById(R.id.bSaveData);
+        Button buttonSave = findViewById(R.id.bSaveData);
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,12 +46,13 @@ public class MainActivity extends AppCompatActivity {
 
                 APerson.fullName = name;
                 APerson.age = age;
-                APerson person = new APerson();
+
+                Person person = new Person(name, age);
                 list.add(person);
-            };
+            }
         });
 
-        Button buttonPressure = (Button) findViewById(R.id.bGoToRecordPressure);
+        Button buttonPressure = findViewById(R.id.bGoToRecordPressure);
         buttonPressure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonVitalSigns = (Button) findViewById(R.id.bGoToRecordVitalSigns);
+        Button buttonVitalSigns = findViewById(R.id.bGoToRecordVitalSigns);
         buttonVitalSigns.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonTest = (Button) findViewById(R.id.bResult);
+        Button buttonTest = findViewById(R.id.bResult);
         buttonTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

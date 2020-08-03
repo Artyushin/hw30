@@ -14,17 +14,17 @@ import java.util.ArrayList;
 public class VitalSigns extends AppCompatActivity {
 
     private final static String TAG = "VitalSigns";
-    private ArrayList<APerson> listVS = new ArrayList<>();
+    private ArrayList<PersonVS> listVS = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vital_signs);
 
-        final EditText etWeight = (EditText)  findViewById(R.id.etWeight);
-        final EditText etNumberSteps = (EditText)  findViewById(R.id.etNumberSteps);
+        final EditText etWeight = findViewById(R.id.etWeight);
+        final EditText etNumberSteps = findViewById(R.id.etNumberSteps);
 
-        Button buttonSaveVS = (Button) findViewById(R.id.bSaveDataVS);
+        Button buttonSaveVS = findViewById(R.id.bSaveDataVS);
         buttonSaveVS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,11 +52,12 @@ public class VitalSigns extends AppCompatActivity {
                 Toast.makeText(VitalSigns.this, "Вес: " + weight + "  Количество шагов: " + numberSteps, Toast.LENGTH_LONG).show();
                 APerson.weight = weight;
                 APerson.numberSteps = numberSteps;
-                APerson person = new APerson();
-                listVS.add(person);
-                finish();
-            };
-        });
 
+                PersonVS person = new PersonVS(weight, numberSteps);
+                listVS.add(person);
+
+                finish();
+            }
+        });
     }
 }

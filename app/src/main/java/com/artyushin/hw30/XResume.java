@@ -3,11 +3,9 @@ package com.artyushin.hw30;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class XResume extends AppCompatActivity {
 
@@ -25,8 +23,7 @@ public class XResume extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-            };
+            }
         });
-
     }
 }
